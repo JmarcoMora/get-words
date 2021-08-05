@@ -34,7 +34,6 @@ def main():
 		if os.path.isfile(output):
 			print('[*] El archivo de salida ya existe')
 		else:
-			#print('[*] excelente papu')
 			file_rute = sys.argv[1]
 			f = open(file_rute,'r',encoding='ISO-8859-1')
 			urls = f.readlines()
@@ -46,7 +45,6 @@ def main():
 				print('')
 				lis += create_book(i.rstrip('\n'))
 				print('')
-			
 			f = open(output,'w')
 			for i in set(lis):
 				f.write(i)
